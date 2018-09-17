@@ -82,11 +82,11 @@ export default class EOS extends Plugin {
     async getEndorsedNetwork(){
         return new Promise((resolve, reject) => {
             resolve(new Network(
-                'EOS Mainnet', 'https',
-                'nodes.get-scatter.com',
+                'DACom Mainnet', 'https',
+                'api.dacom.io',
                 443,
                 Blockchains.EOSIO,
-                'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906'
+                '15a331849f1637899c783fbf6b53d17b94c6e46192e43b403148847c9c62b6dc'
             ));
         });
     }
@@ -177,11 +177,7 @@ export default class EOS extends Plugin {
     }
 
     async fetchTokens(tokens){
-        tokens.push({symbol:'EOS', account:'eosio.token', name:'EOS'});
-        const eosTokens = await fetch("https://raw.githubusercontent.com/eoscafe/eos-airdrops/master/tokens.json").then(res => res.json()).catch(() => []);
-        eosTokens.map(token => {
-            if(!tokens.find(x => `${x.symbol}:${x.account}` === `${token.symbol}:${token.account}`)) tokens.push(token);
-        });
+        tokens.push({symbol:'FLO', account:'eosio.token', name:'FLO'});
     }
 
 

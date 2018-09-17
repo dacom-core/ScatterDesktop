@@ -1,5 +1,5 @@
 {
-  "name": "scatter",
+  "name": "dscatter",
   "version": "8.9.0",
   "description": "Scatter Desktop Companion",
   "private": true,
@@ -146,7 +146,7 @@
     "not ie <= 8"
   ],
   "build": {
-    "productName": "scatter",
+    "productName": "dscatter",
     "appId": "com.get-scatter.server",
     "artifactName": "${os}-${productName}-${version}-${arch}.${ext}",
     "asar": true,
