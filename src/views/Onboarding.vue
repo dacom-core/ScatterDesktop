@@ -182,10 +182,10 @@
                         }
                         const account = availableAccounts[0];
                         await AccountService.addAccount(account);
-                        this.nextStep();
+                        this.finish();
                     } else {
                         await AccountService.addAccountFromKeypair(this.keypair, network);
-                        this.nextStep();
+                        this.finish();
                     }
                 };
 
